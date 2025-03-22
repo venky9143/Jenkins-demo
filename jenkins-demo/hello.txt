@@ -1,2 +1,2 @@
-Hello welcomme to jenkins cherry lets play some thing 
-echo "this is for Git webhook practice "
+<<<<<<< HEAkins welcome 
+>>>>>>> 812ec53 (updated hello)
