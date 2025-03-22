@@ -1,22 +1,31 @@
 pipeline{
-	agent any
-
-	stages{
-	    stage("Build"){
-		steps{
-			echo "Building"
-		    }
-		}
-
-	    stage("run"){
-		steps{
-			echo "running"
-		    }
-		}
-	    stage("test"){
-		 steps{
-		    echo "Testing"
-		}
-	    }		
-	}
+    agent any{
+    stages{
+        stage('Build'){
+            steps{
+                echo "Bulding"
+            }
+        stage("Parallal stage"){
+            Parallal{
+                stage("running"){
+                    steps{
+                        echo "running"
+                    }
+                }
+                stage("code scanning"){
+                    steps{
+                        echo "code scanning completed"
+                    }
+                }
+            }
+        }
+        stage("evrythingbis done "){
+            steps{
+                echo "parallal stage has created and it's wornking"
+                echo "this is the end of the pipeline"          
+            }
+        }
+        }
+    }
+}
 }
