@@ -5,8 +5,9 @@ pipeline{
             steps{
                 echo "Bulding"
             }
-        stage("Parallal stage"){
-            Parallal{
+	}
+        stage("Parallel stage"){
+            Parallel{
                 stage("running"){
                     steps{
                         echo "running"
